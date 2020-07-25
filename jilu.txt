@@ -1,0 +1,171 @@
+l2_reg=0.00005
+
+epsi rate:0.001 0.06 (no)
+epsi rate:0.0003 0.0260
+epsi rate:0.0001 0.0222
+epsi rate:0.00003 0.0265
+epsi rate:0.00001 0.0356
+
+epsi *10 rate: 0.0003 0.145(0.0145) 0.15(0.015)
+epsi *10 rate: 0.0001 0.17(0.017) 0.20(0.02)
+epsi *10 rate: 0.00003 0.25(0.025) 0.26(0.026)
+
+
+l2_reg=0.00001
+
+epsi rate:0.0003 0.0201 0.021
+epsi rate:0.0001 0.0202 0.024
+epsi rate:0.00003 0.0268 0.03
+
+l2_reg=0.000005
+
+epsi rate:0.0003 0.0187 0.02
+epsi rate:0.0001 
+
+l2_reg=0
+epsi rate:0.0003  0.0147 0.019
+
+
+训练数据量太少，且太special
+
+
+
+l2_reg=0.00005
+
+psi rate:0.001  0.14 0.13
+psi rate:0.0003 0.1312 0.12
+psi rate:0.0001 0.2844 
+
+l2_reg=0.000005
+psi rate:0.001  0.13 0.12
+psi rate:0.0003  0.11 0.12
+
+l2_reg=0.00000
+psi rate:0.0003 0.13 0.14
+
+
+改到filter*2之后 第一层前不要drop
+l2_reg=0.00001 psi rate:0.0003 0.0856 (good)
+
+0.00005 psi rate:0.0003 0.1 
+
+
+vgg:
+不太行
+
+全换成3*3的 第一层前不要drop （vggplus.py) 最后一层256
+l2_reg=0.00001 psi rate:0.0003 0.09 0.11 有点过拟合
+l2_reg=0.00005 psi rate:0.0003 0.08 0.11 有点过拟合
+l2_reg=0.0001 psi rate:0.0003 0.0926 0.1
+
+训练5个一起 l2_reg=0.0001 
+ 
+original
+psi_error
+0.84343505
+epsi_error
+1.2697968
+cte_errpr
+1.45181
+x_error
+0.66771877
+y_error
+0.9723596
+
+新的更复杂的网络 l2_reg=0.00001
+
+psi_error
+0.8365009
+epsi_error
+1.2832884
+cte_errpr
+1.5608805
+x_error
+0.7992551
+y_error
+1.009554
+
+
+l2_reg=0.000003
+psi_error
+0.720104
+epsi_error
+1.2297323
+cte_errpr
+1.4635657
+x_error
+0.6261819
+y_error
+0.85001785
+
+l2_reg=0.00001
+psi_error
+0.642699
+epsi_error
+1.1556971
+cte_errpr
+1.3897136
+x_error
+0.5601254
+y_error
+0.819417
+
+psi_error
+0.8577964
+epsi_error
+1.3049191
+cte_errpr
+1.4903536
+x_error
+0.7582433
+y_error
+1.1320853
+
+new batchsize and learning rate 256 0.0003 epho 100
+psi_error
+0.5176356
+epsi_error
+1.117808
+cte_errpr
+1.4150376
+x_error
+0.45743158
+y_error
+0.59802896
+
+psi_error
+0.7034788
+epsi_error
+1.3357123
+cte_errpr
+1.4938041
+x_error
+0.56849
+y_error
+0.7161771
+
+0.0001 epho 150
+psi_error
+0.6551348
+epsi_error
+1.0870054
+cte_errpr
+1.3453207
+x_error
+0.56720203
+y_error
+0.82291365
+
+0.0002 epho 150
+[2.6273772716522217, 0.7024864554405212]
+psi_error
+0.44992718/10
+epsi_error
+0.98848933/100
+cte_errpr
+1.2145592/10
+x_error
+0.33088905*5
+y_error
+0.52856624*5
+
